@@ -8,6 +8,7 @@ defmodule ElixirGolTest do
     assert ElixirGol.hello() == :world
   end
 
+  """
   test "get" do
     with_mock HTTPotion,
       [get: fn("http://example.com", _headers) ->
@@ -18,5 +19,6 @@ defmodule ElixirGolTest do
       assert called HTTPotion.get("http://example.com", :_)
     end
   end
+  """
   
 end
